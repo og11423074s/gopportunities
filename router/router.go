@@ -9,5 +9,6 @@ func Initialize() {
 	// initialize routes
 	initializeRoutes(router)
 
+	// run router
 	router.Run(":8080")
 }
