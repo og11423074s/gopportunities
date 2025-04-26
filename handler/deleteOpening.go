@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+// @BasePath /api/v1
+// @Summary Delete opening
+// @Description Delete a new opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening ID"
+// @Success 200 {object} OpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening [delete]
 func DeleteOpeningHandler(ctx *gin.Context) {
 	id, exists := ctx.GetQuery("id")
 

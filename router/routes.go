@@ -16,6 +16,8 @@ func initializeRoutes(router *gin.Engine) {
 
 	basePath := "/api/v1"
 	docs.SwaggerInfo.BasePath = basePath
+	docs.SwaggerInfo.Description = "Management Openings"
+	docs.SwaggerInfo.Version = "1.0.0"
 
 	v1 := router.Group(basePath)
 

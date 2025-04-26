@@ -6,6 +6,16 @@ import (
 	"net/http"
 )
 
+// @BasePath /api/v1
+// @Summary Get All openings
+// @Description GET All openings
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Success 200 {object} GetAllOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /openings [get]
 func GetOpeningsHandler(ctx *gin.Context) {
 	openings := []schemas.Opening{}
 
